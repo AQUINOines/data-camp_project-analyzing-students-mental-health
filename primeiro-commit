@@ -1,0 +1,12 @@
+-- Run this code to save the CSV file as students
+CREATE TABLE students AS SELECT * FROM read_csv_auto('students.csv');
+-- counting all the records 
+SELECT 
+	COUNT(*)
+FROM students;
+-- counting all the records per student type
+SELECT
+	COUNT(inter_dom)
+FROM students
+GROUP BY inter_dom;
+-- filter the data to see how it differs between the student types
